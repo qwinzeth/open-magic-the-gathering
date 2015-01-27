@@ -1,0 +1,1 @@
+rm Matt/Stowe/Common/*.class Matt/Stowe/MTG/*.class Matt/Stowe/MTG/Cards/*.class Matt/Stowe/MTG/Cards/Sets/*.class Matt/Stowe/MTG/Mechanics/*.class Matt/Stowe/MTG/Mechanics/TriggeredAbilities/*.class Matt/Stowe/MTG/Mechanics/MagicEffects/*.class Matt/Stowe/MTG/Mechanics/MagicEffects/KeywordEffects/*.class Matt/Stowe/MTG/Testing/*.class Matt/Stowe/MTG/Transferrable/*.class

@@ -1,0 +1,4 @@
+First Strike + Deathtouch
+NullPointer on TargetData.IsValidTarget with End Hostilities
+
+2012 Comp rules 608.2b - Spell is always countered if targets are invalid. Wasn't there something about some parts of the spell working even if targets were countered?

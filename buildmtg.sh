@@ -1,0 +1,1 @@
+javac Matt/Stowe/MTG/*.java Matt/Stowe/MTG/Cards/*.java Matt/Stowe/MTG/Cards/Sets/*.java Matt/Stowe/MTG/Mechanics/*.java Matt/Stowe/MTG/Mechanics/TriggeredAbilities/*.java Matt/Stowe/MTG/Mechanics/MagicEffects/*.java Matt/Stowe/MTG/Mechanics/MagicEffects/KeywordEffects/*.java Matt/Stowe/MTG/Testing/*.java Matt/Stowe/MTG/Transferrable/*.java
