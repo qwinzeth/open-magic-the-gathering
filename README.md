@@ -1,13 +1,21 @@
 # open-magic-the-gathering
 Magic the Gathering is an excellent programming target containing a stack, complex inheritance, and a naturally complex design.
 
-To build:
+To build on Linux:
 
 ./build.sh
+
+To build on Windows:
+
+build.sh
 
 To run:
 
 java Matt.Stowe.MTG.Main
+
+If you get a message about not being able to find the file, try telling Java that the classpath is the current directory:
+
+java -cp . Matt.Stowe.MTG.Main
 
 Most of the interactions are done with the mouse, but you can also use the following keys:
 
