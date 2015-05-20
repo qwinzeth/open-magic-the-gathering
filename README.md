@@ -25,6 +25,8 @@ Most of the interactions are done with the mouse, but you can also use the follo
 
 This version contains the following:
 
+1 card - Dragons of Tarkir
+
 144 cards - Khans of Tarkir
 
 147 cards - 2015 Core
