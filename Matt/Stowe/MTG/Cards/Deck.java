@@ -690,6 +690,11 @@ public class Deck extends AnimatedGUIObject{
 			return KhansOfTarkir.TombOfTheSpiritDragon(owner);
 		}
 		// END KHANSOFTARKIR
+		// BEGIN DRAGONSOFTARKIR
+		else if(cardname.equals("Aerie Bowmasters")){
+			return DragonsOfTarkir.AerieBowmasters(owner);
+		}
+		// END DRAGONSOFTARKIR
 		else if(cardname.equals("Mountain")){
 			return BasicLand.GenerateMountain(owner);
 		}else if(cardname.equals("Forest")){

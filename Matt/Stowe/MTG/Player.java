@@ -375,12 +375,11 @@ public class Player implements ITargetable, IPlayer{
 			return false;
 		}
 		
-		if(source.IsFaceDown()&&(maa.Effects.length!=1||!(maa.Effects[0] instanceof MagicEffectMorphTargetCreature))){
+		if(source.IsFaceDown() && (maa.Effects.length < 1 || !(maa.Effects[0] instanceof MagicEffectMorphTargetCreature))){
 			return false;
 		}
 		
 		ArrayList<ManaCost> additionalManaCosts=source.GetActivatedAbilityManaCost();
-		
 		ManaCost manacost=maa.ManaCosts;
 		if(manacost!=null||additionalManaCosts.size()>0){
 			ManaCost adjmanacost=null;

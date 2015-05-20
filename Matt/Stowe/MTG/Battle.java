@@ -42,7 +42,7 @@ public class Battle implements Runnable{
 		MagicEffect[] effectsToPush=effectsDeepCopied.toArray(new MagicEffect[0]);
 		if(effectsToPush.length>0){
 			this.theStack.push(new MagicStackElement(effectsToPush, element.CardToPlay));
-			if(effectsToPush.length==1&&this.doesntUseStack(effectsToPush[0])){
+			if(this.doesntUseStack(effectsToPush[0])){
 				this.resolveTheStack(this.theStack.size()-1);
 			}
 			if(element.CardToPlay!=null&&!element.CardToPlay.IsLand()){
@@ -343,7 +343,7 @@ public class Battle implements Runnable{
 				while(newPlayerActivity!=null){
 					this.payCosts(currentPlayer, newPlayerActivity);
 					this.pushEffectsOntoTheStack(newPlayerActivity.GetMagicStackElement());
-					if(newPlayerActivity.Effects==null||newPlayerActivity.Effects.length!=1||!this.doesntUseStack(newPlayerActivity.Effects[0])){
+					if(newPlayerActivity.Effects==null||!this.doesntUseStack(newPlayerActivity.Effects[0])){
 						this.allowPlayersToRespond();
 					}
 					this.resolveTheStack(0);
@@ -525,7 +525,7 @@ public class Battle implements Runnable{
 				while(newPlayerActivity2!=null){
 					this.payCosts(currentPlayer, newPlayerActivity2);
 					this.pushEffectsOntoTheStack(newPlayerActivity2.GetMagicStackElement());
-					if(newPlayerActivity2.Effects==null||newPlayerActivity2.Effects.length!=1||this.doesntUseStack(newPlayerActivity2.Effects[0])){
+					if(newPlayerActivity2.Effects==null||this.doesntUseStack(newPlayerActivity2.Effects[0])){
 						this.allowPlayersToRespond();
 					}
 					this.resolveTheStack(0);

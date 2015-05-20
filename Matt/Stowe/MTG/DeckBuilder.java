@@ -27,7 +27,7 @@ public class DeckBuilder{
 	private String currentSetName;
 	private Player player;
 	
-	private static final String[] SETNAMES=new String[]{"Theros", "Core 2015", "Khans of Tarkir"};
+	private static final String[] SETNAMES=new String[]{"Theros", "Core 2015", "Khans of Tarkir", "Dragons of Tarkir"};
 	private static final String[] COLORNAMES=new String[]{"Red", "Green", "Blue", "White", "Black", "Multicolored/Colorless"};
 	private int setIndex;
 	private int colorIndex;
@@ -83,6 +83,8 @@ public class DeckBuilder{
 			this.LoadKhansOfTarkirBlack();
 		}else if("Khans of Tarkir Multicolored/Colorless".equals(this.currentSetName)){
 			this.LoadKhansOfTarkirColorless();
+		}else if("Dragons of Tarkir Green".equals(this.currentSetName)){
+			this.LoadDragonsOfTarkirGreen();
 		}
 	}
 
@@ -610,6 +612,14 @@ public class DeckBuilder{
 // ENDREGION LANDS
 		this.finalizeSetLoading();
 	}
+
+	public void LoadDragonsOfTarkirGreen(){
+		this.availableCards.clear();
+// REGION CREATURES
+		this.availableCards.add(new GUIClickableText("Aerie Bowmasters", 0, 0));
+// ENDREGION CREATURES
+		this.finalizeSetLoading();
+	}	
 
 	private void finalizeSetLoading(){
 		for(int i=0;i<this.availableCards.size();i++){

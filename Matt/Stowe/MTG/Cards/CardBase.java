@@ -29,7 +29,7 @@ public abstract class CardBase extends AnimatedGUIObject implements ITargetable{
 		this.activatedAbilities=new Vector<MagicActivatedAbility>();
 		for(int i=0;i<this.staticActivatedAbilities.size();i++){
 			MagicActivatedAbility maa=this.staticActivatedAbilities.get(i);
-			if(maa.Effects.length==1&&maa.Effects[0] instanceof MagicEffectMorphTargetCreature){
+			if(maa.Effects.length > 0 && maa.Effects[0] instanceof MagicEffectMorphTargetCreature){
 				this.activatedAbilities.add(maa);
 			}
 		}
@@ -59,7 +59,7 @@ public abstract class CardBase extends AnimatedGUIObject implements ITargetable{
 		this.staticContinuousAbilities=null;
 		for(int i=0;i<this.staticActivatedAbilities.size();i++){
 			MagicActivatedAbility maa=this.staticActivatedAbilities.get(i);
-			if(!(maa.Effects.length==1&&maa.Effects[0] instanceof MagicEffectMorphTargetCreature)){
+			if(!(maa.Effects.length > 0 && maa.Effects[0] instanceof MagicEffectMorphTargetCreature)){
 				this.activatedAbilities.add(maa);
 			}
 		}
@@ -917,7 +917,7 @@ public abstract class CardBase extends AnimatedGUIObject implements ITargetable{
 		for(int i=0;i<this.activatedAbilities.size();i++){
 			int cx=x+2;
 			MagicActivatedAbility ability=this.activatedAbilities.elementAt(i);
-			if(this.morphed&&ability.Effects.length==1&&ability.Effects[0] instanceof MagicEffectMorphTargetCreature)
+			if(this.morphed&&ability.Effects.length > 0 && ability.Effects[0] instanceof MagicEffectMorphTargetCreature)
 				continue;
 			if(ability.ManaCosts!=null){
 				cx=ability.ManaCosts.paint(g, cx, cy);
